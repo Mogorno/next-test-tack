@@ -5,17 +5,17 @@ import { APP_ROUTES } from '@/shared/config/routes';
 import { FallbackImage } from '@/shared/ui/FallbackImage';
 import Link from 'next/link';
 
-type ProductItemListProps = Product & React.ComponentProps<'div'>;
+type ListItemProps = Product & React.ComponentProps<'div'>;
 
 const fallbackImageUrl = '/images/404_buckethead.jpg';
 
-const ProductItemList = ({
+const ListItem = ({
     image = fallbackImageUrl,
     title,
     description,
     price,
     id,
-}: ProductItemListProps) => {
+}: ListItemProps) => {
     return (
         <li className="border w-full rounded p-4 shadow hover:shadow-md transition">
             <Link
@@ -40,4 +40,4 @@ const ProductItemList = ({
     );
 };
 
-export default ProductItemList;
+export default ListItem;

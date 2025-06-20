@@ -4,7 +4,7 @@ import { Product } from '@/entities/product/model/types';
 
 const products: Product[] = [
     {
-        id: '1',
+        id: 'prod-1',
         title: 'Phone',
         description: 'Smartphone with a great camera',
         price: 799,
@@ -12,7 +12,7 @@ const products: Product[] = [
         category: 'Electronics',
     },
     {
-        id: '2',
+        id: 'prod-2',
         title: 'Laptop',
         description: 'Laptop with a great battery',
         price: 899,
@@ -20,7 +20,7 @@ const products: Product[] = [
         category: 'Electronics',
     },
     {
-        id: '3',
+        id: 'prod-3',
         title: 'Tablet',
         description: 'Tablet with a great screen',
         price: 999,
@@ -28,7 +28,7 @@ const products: Product[] = [
         category: 'Electronics',
     },
     {
-        id: '4',
+        id: 'prod-4',
         title: 'Watch',
         description: 'Smartwatch with a great fitness',
         price: 599,
@@ -36,7 +36,7 @@ const products: Product[] = [
         category: 'Electronics',
     },
     {
-        id: '5',
+        id: 'prod-5',
         title: 'Headphones',
         description: 'Headphones with a great sound',
         price: 399,
@@ -44,7 +44,7 @@ const products: Product[] = [
         category: 'Electronics',
     },
     {
-        id: '6',
+        id: 'prod-6',
         title: 'Mouse',
         description: 'Mouse with a great buttons',
         price: 299,
@@ -52,7 +52,7 @@ const products: Product[] = [
         category: 'Electronics',
     },
     {
-        id: '7',
+        id: 'prod-7',
         title: 'Keyboard',
         description: 'Keyboard with a great keys',
         price: 199,
@@ -60,7 +60,7 @@ const products: Product[] = [
         category: 'Electronics',
     },
     {
-        id: '8',
+        id: 'prod-8',
         title: 'Microphone',
         description: 'Microphone with a great sound',
         price: 99,

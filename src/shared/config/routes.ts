@@ -7,6 +7,8 @@ if (!BASE_URL) {
 }
 
 export const API_ROUTES = {
+    cart: new URL('/api/cart', BASE_URL),
+    cartItem: (id: string) => new URL(`/api/cart/${id}`, BASE_URL),
     products: new URL('/api/products', BASE_URL),
     product: (id: string) => new URL(`/api/product/${id}`, BASE_URL),
 } as const;

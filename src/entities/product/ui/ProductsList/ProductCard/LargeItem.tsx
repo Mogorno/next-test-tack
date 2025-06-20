@@ -5,11 +5,11 @@ import { APP_ROUTES } from '@/shared/config/routes';
 import { FallbackImage } from '@/shared/ui/FallbackImage';
 import Link from 'next/link';
 
-type ProductItemGridProps = Product & React.ComponentProps<'div'>;
+type LargeItemProps = Product & React.ComponentProps<'div'>;
 
 const fallbackImageUrl = '/images/404_buckethead.jpg';
 
-const ProductItemGrid: React.FC<ProductItemGridProps> = ({
+const LargeItem: React.FC<LargeItemProps> = ({
     id,
     image = fallbackImageUrl,
     title,
@@ -23,18 +23,16 @@ const ProductItemGrid: React.FC<ProductItemGridProps> = ({
                     src={image}
                     fallbackSrc={fallbackImageUrl}
                     alt={title}
-                    className="w-full h-24 object-cover mb-2"
+                    className="w-full h-48 object-cover mb-2"
                     width={300}
-                    height={150}
+                    height={300}
                 />
-                <div className="flex items-center justify-between">
-                    <h3 className="font-semibold">{title}</h3>{' '}
-                    <p className="mt-2 font-bold">${price}</p>
-                </div>
+                <h3 className="font-semibold">{title}</h3>
                 <p className="text-gray-600">{description}</p>
+                <p className="mt-2 font-bold">${price}</p>
             </Link>
         </li>
     );
 };
 
-export default ProductItemGrid;
+export default LargeItem;
