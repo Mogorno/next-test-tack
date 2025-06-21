@@ -1,8 +1,8 @@
-import { getCartItems } from '@/shared/api/cartItems';
-import CartItemsList from '@/widgets/cart/ui/CartItemsList';
+import { cart } from '@/shared/api';
+import { CartItemsList } from '@/widgets/cart/';
 
 const Cart = async () => {
-    const cartItems = await getCartItems();
+    const cartItems = await cart.getAll();
 
     return (
         <div className="mt-24">

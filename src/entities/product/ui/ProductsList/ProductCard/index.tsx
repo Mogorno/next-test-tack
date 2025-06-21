@@ -1,4 +1,8 @@
-import { Product, ProductCardVariants } from '@/entities/product';
+import {
+    Product,
+    ProductCardAction,
+    ProductCardVariants,
+} from '@/entities/product';
 import LargeItem from './LargeItem';
 import ListItem from './ListItem';
 import GridItem from './GridItem';
@@ -9,13 +13,17 @@ const variants = {
     grid: GridItem,
 };
 
-interface ProductCardProps extends Product {
+export interface ProductCardBaseProps extends Product {
+    actions?: ProductCardAction;
+}
+
+interface ProductCardProps extends ProductCardBaseProps {
     variant?: ProductCardVariants;
 }
 
-const ProductCard = ({ variant = 'large', ...product }: ProductCardProps) => {
+const ProductCard = ({ variant = 'large', ...restProps }: ProductCardProps) => {
     const ProductCard = variants[variant];
-    return <ProductCard {...product} />;
+    return <ProductCard {...restProps} />;
 };
 
 export default ProductCard;

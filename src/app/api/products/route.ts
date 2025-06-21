@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
-import db from '@/shared/lib/db';
+import { db } from '@/shared/lib';
 
 export async function GET() {
-    return NextResponse.json(await db.products.get());
+    const products = await db.products.getAll();
+    return NextResponse.json(products);
 }

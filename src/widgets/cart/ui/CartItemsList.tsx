@@ -1,7 +1,7 @@
 'use client';
 
-import { CartPopulatedItem } from '@/entities/cart/model';
-import { deleteCartItemById } from '@/shared/api/cartItems';
+import { CartPopulatedItem } from '@/entities';
+import { cart } from '@/shared/api';
 
 const CartItemsList = ({ cartItems }: { cartItems: CartPopulatedItem[] }) => {
     return (
@@ -14,7 +14,7 @@ const CartItemsList = ({ cartItems }: { cartItems: CartPopulatedItem[] }) => {
                     <p>${item.quantity}</p>
                     <button
                         onClick={async () => {
-                            deleteCartItemById(item.id);
+                            cart.removeById(item.id);
                         }}
                     >
                         Remove

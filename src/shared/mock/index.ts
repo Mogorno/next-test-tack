@@ -1,4 +1,4 @@
-import { CartItem, CartPopulatedItem } from '@/entities/cart/model';
+import { CartItem, CartPopulatedItem } from '@/entities/cart';
 import cartItems from './cartItems';
 import products from './products';
 
@@ -13,7 +13,7 @@ const mock = {
             return acc;
         }, [] as CartPopulatedItem[]);
     },
-    set cart(newCartItems: CartPopulatedItem[] | CartItem[]) {
+    set cart(newCartItems: (CartPopulatedItem | CartItem)[]) {
         this.cartItems = newCartItems.map(({ quantity, id, ...rest }) => {
             let productId;
 

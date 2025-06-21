@@ -11,10 +11,12 @@ type Props<T> = {
     children: (sorted: T[], restProps: Omit<Props<T>, 'children'>) => ReactNode;
 };
 
-export function SortItems<T>({ items, sortFn, children, ...rest }: Props<T>) {
+function SortItems<T>({ items, sortFn, children, ...rest }: Props<T>) {
     const searchParams = useSearchParams();
     const sort = (searchParams.get('sort') as SortType) ?? 'default';
     const sorted = sortFn(items, sort);
 
     return <>{children(sorted, { items, sortFn, ...rest })}</>;
 }
+
+export default SortItems;

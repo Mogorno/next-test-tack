@@ -8,7 +8,7 @@ type FallbackImageProps = Omit<ImageProps, 'src'> & {
     fallbackSrc: string;
 };
 
-export const FallbackImage = ({
+const FallbackImage = ({
     src,
     fallbackSrc,
     alt,
@@ -25,3 +25,5 @@ export const FallbackImage = ({
         />
     );
 };
+
+export default FallbackImage;

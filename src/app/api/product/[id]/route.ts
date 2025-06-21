@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
-import db from '@/shared/lib/db';
+import { db } from '@/shared/lib';
 
 export async function GET(
     request: Request,
     { params }: { params: { id: string } }
 ) {
     const { id } = params;
-    return NextResponse.json(await db.products.getById(id));
+    const product = await db.products.getById(id);
+    return NextResponse.json(product);
 }

@@ -20,3 +20,8 @@ type SortedProductsMethods<T> = T extends string
 export type ProductSortType =
     | SortedProductsMethods<SortedProductsFields>
     | 'search';
+
+export type ProductCardAction = (
+    product: Product,
+    variant: ProductCardVariants
+) => React.ReactNode;

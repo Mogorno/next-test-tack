@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import db from '@/shared/lib/db';
+import { db } from '@/shared/lib';
 
 export async function DELETE(
     request: Request,
@@ -10,12 +10,11 @@ export async function DELETE(
         if (!id) {
             return NextResponse.json({ error: 'Missing id' }, { status: 400 });
         }
-        const cartItems = await db.cartItems.remove(id);
+        const cartItems = await db.cart.removeById(id);
         return NextResponse.json(cartItems);
     } catch (error) {
-        console.log(error);
         return NextResponse.json(
-            { error: 'Failed to remove item' },
+            { error: `Failed to remove item ${JSON.stringify(error)}` },
             { status: 500 }
         );
     }

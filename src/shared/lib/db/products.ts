@@ -1,8 +1,8 @@
 import { Product } from '@/entities/product/model';
 import mock from '@/shared/mock';
 
-export const productsRepository = {
-    async get(): Promise<Product[]> {
+const products = {
+    async getAll(): Promise<Product[]> {
         return mock.products;
     },
 
@@ -10,3 +10,5 @@ export const productsRepository = {
         return mock.products.find((p) => p.id === id);
     },
 };
+
+export default products;

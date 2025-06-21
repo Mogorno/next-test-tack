@@ -1,5 +1,5 @@
-import { Product } from '@/entities/product/model';
-import { FallbackImage } from '@/shared/ui/FallbackImage';
+import { Product } from '@/entities/product';
+import { FallbackImage } from '@/shared/ui';
 
 type ProductCardProps = Product;
 

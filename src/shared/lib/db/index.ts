@@ -1,9 +1,9 @@
-import { productsRepository } from './products';
-import { cartItemsRepository } from './cartItems';
+import products from './products';
+import cart from './cart';
 
 const db = {
-    products: productsRepository,
-    cartItems: cartItemsRepository,
+    products,
+    cart,
 };
 
 export default db;
