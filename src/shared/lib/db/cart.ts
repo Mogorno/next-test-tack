@@ -6,6 +6,15 @@ const cart = {
         return mock.cart;
     },
 
+    async updateOne({
+        id,
+        ...rest
+    }: { id: string } & Record<string, unknown>): Promise<CartPopulatedItem[]> {
+        return (mock.cart = mock.cart.map((item) =>
+            item.id === id ? { ...item, ...rest } : item
+        ));
+    },
+
     async removeById(id: string): Promise<CartPopulatedItem[]> {
         const index = mock.cart.findIndex((item) => item.id === id);
         if (index === -1) return mock.cart;
