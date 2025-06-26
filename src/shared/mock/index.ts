@@ -1,8 +1,10 @@
 import { CartItem, CartPopulatedItem } from '@/entities/cart';
 import cartItems from './cartItems';
 import products from './products';
+import nominals from './nominals';
 
 const mock = {
+    nominals,
     products,
     cartItems,
     get cart(): CartPopulatedItem[] {
