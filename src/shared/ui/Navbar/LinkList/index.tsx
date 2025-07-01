@@ -8,6 +8,7 @@ const links = [
     { name: 'Home', URL: APP_ROUTES.home },
     { name: 'Cart', URL: APP_ROUTES.cart },
     { name: 'ATM', URL: APP_ROUTES.atm },
+    { name: 'Todos', URL: APP_ROUTES.todos },
 ];
 
 const LinkList = () => {

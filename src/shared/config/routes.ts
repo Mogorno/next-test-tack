@@ -17,5 +17,7 @@ export const APP_ROUTES = {
     home: new URL('/', BASE_URL),
     cart: new URL('/cart', BASE_URL),
     product: (id: string) => new URL(`/product/${id}`, BASE_URL),
+    users: new URL('/users', BASE_URL),
     atm: new URL('/atm', BASE_URL),
+    todos: new URL('/todos', BASE_URL),
 } as const;
